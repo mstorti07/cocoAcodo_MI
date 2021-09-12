@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Etiquetas <meta> obligatorias para Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+
+    </head>
+    <body>
+
+        <script>
+
+            var primera = 40;
+            var segunda = 16;
+            var total = primera + segunda;
+
+            document.write(
+                '<div class="container pt-5">'+
+                    '<div class="d-flex justify-content-center">'+
+                        '<div class="col-7 card shadow">'+
+                            '<h2 class="display-4 text-center pt-4">El resultado de la suma de las variables es</h2> <br>' 
+                            + '<h2 class="display-2 text-center text-primary">'+total+'</h2>'
+                            +'<hr>'
+                            + '<h5 class="text-center text-secondary pt-2 pb-4"> Variables: '+ primera  +' + ' + segunda +'</h5>'
+                        +'</div>'
+                    +'</div>'
+                +'</div>'                
+                );
+
+        </script>
+    </body> 
+</html>
