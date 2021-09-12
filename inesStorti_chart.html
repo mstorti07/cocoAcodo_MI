@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Etiquetas <meta> obligatorias para Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+
+    </head>
+
+    <body>
+         <div class="container d-flex justify-content-center mt-4">
+             <div class="col-lg-8 col-sm-12 card p-3 shadow">
+                 <h4 class="text-center pb-4 pt-4"> ¿Cómo realizarías el siguiente gráfico con Bootstrap?</h4>
+                 <hr>
+                <canvas id="myChart"></canvas>
+                <hr>
+                <p class="text-center"> utilizando el script "chart.js" que propociona templates para realizar diversos gráficos y agregando los parámetros correspondientes.</p>
+             </div>
+          </div>
+
+          
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script>
+              let myChart = document.getElementById("myChart");
+              //Globla changes
+            //Chart.defaults.global.defaultFontFamily = "arial";
+            //Chart.defaults.global.defaultFontSize = 18;
+            //Chart.defaults.global.defaultFontColor = "red";
+
+              let lineChart = new Chart(myChart, {
+                  type: "line", // bar, donut, horizontal bar, pie, polar Area
+                  data: {
+                      labels:["Lunes","Martes","Miercoles","Jueves","Viernes","Sábado","Domingo"],
+                      datasets:[{
+                          label:"Grafico de ejemplo",
+                          data: [
+                              16000,
+                              22000,
+                              18500,
+                              24000,
+                              23000,
+                              24000,
+                              12000,
+                              26000,
+                          ],
+                          backgroundColor:"#007bff",
+                          borderColor: '#007bff',
+                         //backgoundColo:[] para que cada parametro tenga un color distinto
+                         //borderWitdh:4,
+                         //borderColor:"blue",
+                         //hoverborderWitdh:1,
+                      }
+                      ]
+                  }
+              }
+              );
+          </script>
+    </body>
+</html>
